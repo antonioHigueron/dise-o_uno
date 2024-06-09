@@ -1,0 +1,140 @@
+body{
+    /* estructura los hijos directos en rejillas */
+    display: grid;
+    /* AREAS, numero de fila, que se VEN en la imagen */
+    /* grid-row: 4; */
+    /* AREAS, numero de columnas */
+    /* grid-column: 2; */
+    /* inidicar el porcentaje de cada fila */
+    grid-template-rows: 10% 10% auto 10%;
+    /* porcentaje a ocupar de cada columna */
+    grid-template-columns: 60% 40%;
+}
+
+header {
+    /* borde al contenedor tag */
+    border: 10px solid black;
+    /* separar de otros contenedores, NO internamente */
+    margin-bottom: 2%;
+    /* separa el contenido interno */
+    padding: 2%;
+    /* como se ubica header dentro del body */
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+
+}
+
+nav {
+    border: 10px solid rgb(218, 40, 40);
+    margin-bottom: 2%;
+    padding: 2%;
+    /* como se ubica nav dentro del body */
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+main {
+    border: 10px solid rgb(26, 128, 6);
+    margin-bottom: 2%;
+    padding: 2%;
+    /* como se ubica main dentro del body */
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+aside {
+    border: 10px solid rgb(49, 51, 156);
+    margin-bottom: 2%;
+    padding: 2%;
+    /* como se ubica aside dentro del body */
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+footer {
+    border: 10px solid rgb(202, 95, 122);
+    margin-bottom: 2%;
+    padding: 2%;
+    /* como se ubica footer dentro del body */
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+@font-face {
+    font-family: 'nombre';
+    src: url("../fuentes/Ubuntu-Regular.ttf");
+    src: url("../fuentes/fuente_examen.ttf");
+    }
+
+:root{
+    --fuente_encabezado1: 'nombre';
+}
+
+
+body{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 10% 10% 70% 10%;
+}
+/*grid-column-start: 1;
+    grid-column-end: 2;*/
+/*header {
+    border: 1px solid black;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    font-family: var(--fuente_encabezado1);
+}
+*/

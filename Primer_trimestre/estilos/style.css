@@ -1,143 +1,77 @@
 body{
-    /* estructura los hijos directos en rejillas */
+    /* color de fondo */
+    background-color: aqua;
+    /* estructura de los componentes hijos */
     display: grid;
-    /* AREAS, numero de fila, que se VEN en la imagen */
-    /* grid-row: 4; */
-    /* AREAS, numero de columnas */
-    /* grid-column: 2; */
-    /* inidicar el porcentaje de cada fila */
-    grid-template-rows: 10% 10% auto 10%;
-    /* porcentaje a ocupar de cada columna */
+    /* hay que darle altura, para que los % funcionen */
+    /* height: 100%; */
+    /* numero de filas */
+    grid-template-rows: 50% 50% 200% 50%;
+    /* numero de columnas */
     grid-template-columns: 60% 40%;
+
 }
 
-header {
-    /* borde al contenedor tag */
-    border: 10px solid black;
-    /* separar de otros contenedores, NO internamente */
-    margin-bottom: 2%;
-    /* separa el contenido interno */
+header{
+    /* borde que tiene el contenedor */
+    border: 1px black solid;
+    /* distancia hacia dentro del contenedor */
     padding: 2%;
-    /* como se ubica header dentro del body */
+    /* color de fondo */
+    background-color: pink;
+    /* donde comienda en filas */
     grid-row-start: 1;
+    /* donde termina en filas */
     grid-row-end: 2;
-    grid-column-start: 1;
-    grid-column-end: 3;
-
-
+    /* comienzo / final INCLUIDAS de columnas */
+    grid-column: 1 / 3;
+    /* distancia relativa en altura, vw = anchura 
+    medidas relativas: em,ex,ch,rem,lh,vmix,vmax
+    */
+    margin-bottom: 1vh;
+    
 }
 
-nav {
-    border: 10px solid rgb(218, 40, 40);
-    margin-bottom: 2%;
-    padding: 2%;
-    /* como se ubica nav dentro del body */
+nav{
+    border: 1px black solid;
+    background-color: rgb(189, 136, 58);
     grid-row-start: 2;
     grid-row-end: 3;
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column: 1 / 3;
+    margin-bottom: 1vh;
 }
 
-main {
-    border: 10px solid rgb(26, 128, 6);
-    margin-bottom: 2%;
-    padding: 2%;
-    /* como se ubica main dentro del body */
+main{
+    border: 1px black solid;
+    background-color: rgb(148, 4, 177);
     grid-row-start: 3;
     grid-row-end: 4;
     grid-column-start: 1;
     grid-column-end: 2;
+    margin-bottom: 1vh;
+    margin-right: 1vh;
 }
 
-aside {
-    border: 10px solid rgb(49, 51, 156);
-    margin-bottom: 2%;
-    padding: 2%;
-    /* como se ubica aside dentro del body */
+aside{
+    border: 1px black solid;
+    background-color: rgb(243, 255, 79);
     grid-row-start: 3;
     grid-row-end: 4;
     grid-column-start: 2;
     grid-column-end: 3;
+    margin-bottom: 1vh;
 }
 
-footer {
-    border: 10px solid rgb(202, 95, 122);
-    margin-bottom: 2%;
-    padding: 2%;
-    /* como se ubica footer dentro del body */
+footer{
+    border: 1px black solid;
+    background-color: rgb(246, 247, 240);
     grid-row-start: 4;
     grid-row-end: 5;
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column: 1 / 3;
+    margin-bottom: 1vh;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-@font-face {
-    font-family: 'nombre';
-    src: url("../fuentes/Ubuntu-Regular.ttf");
-    src: url("../fuentes/fuente_examen.ttf");
-    }
-
-:root{
-    --fuente_encabezado1: 'nombre';
-}
-
-
-body{
-    display: grid;
-    grid-template-columns: 60% 40%;
-    grid-template-rows: 10% 10% 70% 10%;
-}
-/*grid-column-start: 1;
-    grid-column-end: 2;*/
-/*header {
-    border: 1px solid black;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    text-align:center;
-    font-family: var(--fuente_encabezado1);
-}
-*/
 
 
 
