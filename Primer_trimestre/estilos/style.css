@@ -1,4 +1,21 @@
-body{
+/* --2-- */
+/* definir una fuente para el texto del header */
+@font-face {
+    font-family: 'nombre';
+    src: url("../fuentes/Ubuntu-Regular.ttf");
+    src: url("../fuentes/fuente_examen.ttf");
+    /* esta es la fuente local del equipo, y segura por defecto*/
+    src: sans-serif;
+}
+
+:root {
+    /* crear variable a usar como propiedad 'fuente' en el header */
+    --fuente_encabezado1: 'nombre';
+}
+
+
+/* --1-- */
+body {
     /* color de fondo */
     background-color: aqua;
     /* estructura de los componentes hijos */
@@ -9,14 +26,14 @@ body{
     grid-template-rows: 50% 50% 200% 50%;
     /* numero de columnas */
     grid-template-columns: 60% 40%;
-
+    /* --2-- */
 }
 
-header{
+header {
     /* borde que tiene el contenedor */
     border: 1px black solid;
     /* distancia hacia dentro del contenedor */
-    padding: 2%;
+    /* padding: 2%; */
     /* color de fondo */
     background-color: pink;
     /* donde comienda en filas */
@@ -29,19 +46,27 @@ header{
     medidas relativas: em,ex,ch,rem,lh,vmix,vmax
     */
     margin-bottom: 1vh;
-    
+    /* --2-- */
+    /* alinear horizontal y vertical texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* definir una fuente para el texto del header */
+    font-family: var(--fuente_encabezado1);
 }
 
-nav{
+nav {
     border: 1px black solid;
     background-color: rgb(189, 136, 58);
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column: 1 / 3;
     margin-bottom: 1vh;
+    /* --3-- */
+
 }
 
-main{
+main {
     border: 1px black solid;
     background-color: rgb(148, 4, 177);
     grid-row-start: 3;
@@ -50,9 +75,13 @@ main{
     grid-column-end: 2;
     margin-bottom: 1vh;
     margin-right: 1vh;
+    /* --4--main*/
+    /* ordenar libros vertical y horizontal */
+    display: flex;flex-direction: row;justify-content: space-around;align-items: center;
+
 }
 
-aside{
+aside {
     border: 1px black solid;
     background-color: rgb(243, 255, 79);
     grid-row-start: 3;
@@ -60,19 +89,133 @@ aside{
     grid-column-start: 2;
     grid-column-end: 3;
     margin-bottom: 1vh;
+    /* --5--aside,tabla */
+    display: flex;
+    /* poner los item hijos centrados en direccion columna */
+    flex-direction: column;justify-content: center;align-items: center;
+
 }
 
-footer{
+footer {
     border: 1px black solid;
     background-color: rgb(246, 247, 240);
     grid-row-start: 4;
     grid-row-end: 5;
     grid-column: 1 / 3;
     margin-bottom: 1vh;
+    /*--6--footer*/
+    /* alinear horizontal y vertical texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 
+/* --2-- */
+/* texto del encabezado */
+h1 {
+    /* separacion entre palabras */
+    word-spacing: 10px;
+    /* sombra del texto  
+    offset-x | offset-y | difuminacion sombra | color */
+    text-shadow: -5px -5px 4px black;
+}
+
+.nom {
+    /* color del texto, de la clase nom */
+    color: aqua;
+}
+
+.ape {
+    /* color del texto, de la clase ape */
+    color: green;
+}
+
+/* --3--nav */
+#navegacion {
+    /* eliminar el icono de la lista */
+    list-style: none;
+    /* que aparezcan centrado los elementos */
+    display: flex;
+    justify-content: center;
+    /* 1 opcion, otra forma de crear espacio entre los elementos */
+    /* justify-content: space-evenly; */
+    /* align-items: center; */
+
+}
+
+li {
+    /*2 opcion, genera espacio a la derecha de cada elemento del nav */
+    padding-right: 10vh;
+}
+
+
+/* --4--main*/
+.libro{
+    background-color: brown;
+    border-radius: 12%;
+    display: flex;
+    /* poner los item hijos centrados en direccion columna */
+    flex-direction: column;justify-content: center;align-items: center;
+    /* margen entre los libros que se encuentran dentro del main */
+    margin: 1vh;
+    padding: 1vh;
+
+
+}
+
+/* poner borde a los libros impares */
+.libro:nth-child(odd){/*odd=impares*/
+    border: 5px solid green;
+}
+/* poner borde a los libros pares */
+.libro:nth-child(even){/*even=pares*/
+    border: 5px solid blue;
+}
+
+.libro img{
+    /* medidas imagenes de cada libro */
+    height: 10vh;
+}
+
+.titulo{
+    /* poner el titulo de los libros en el centro */
+    text-align: center;
+}
+
+.libro p{
+    /* Número de columnas */
+    column-count: 2; 
+    /* Espacio entre columnas */
+    column-gap: 20px; 
+    /* Línea separadora entre columnas */
+    column-rule: 1px solid #999; 
+    
+}
+
+/* --5--aside*/
+
+td, th{
+    border: 1px solid black;
+}
+
+.fila{
+    text-align: center;
+}
+
+/*--6--footer*/
 
 
 
+
+
+/* 1 estructura */
+/* 2 encabezado, header*/
+/* 3 navegacion, nav*/
+/* 4 contenido, main*/
+/* 5 aside, tabla*/
+/* 6 footer*/
+/* 7 */
+/* 8 */
+/* 9 */

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,12 +9,71 @@
     <link rel="stylesheet" href="../estilos/style.css">
     <!-- <link rel="stylesheet" href="../estilos/style2.css"> -->
 </head>
+
 <body>
-    <header>Header</header>
-    <nav>Nav</nav>
-    <main>Main</main>
-    <aside>Aside</aside>
-    <footer>Footer</footer>
-    
+    <header>
+        <h1><span class="nom">Antonio</span> <span class="ape">Cobos Cabello</span></h1>
+    </header>
+    <nav>
+        <ul id="navegacion">
+            <li><a href="" accesskey="u" tabindex="1">Catalogo</a></li><!--accesskey: shift + alt + letra-->
+            <li><a href="" accesskey="o" tabindex="2">Ventas</a></li>
+            <li><a href="" accesskey="n" tabindex="3">Novedades</a></li>
+
+        </ul>
+    </nav>
+    <main>
+        <div class="libro">
+            <img src="../imagenes/libro.png" alt="">
+            <p class="titulo">libro 1</p>
+            <p class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni reprehenderit asperiores, laboriosam quod eaque blanditiis ullam similique quasi voluptatibus accusamus mollitia cum tempora libero commodi eius voluptatem temporibus sapiente optio?</p>
+        </div>
+        <div class="libro">
+            <img src="../imagenes/libro.png" alt="">
+            <p class="titulo">libro 2</p>
+            <p class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni reprehenderit asperiores, laboriosam quod eaque blanditiis ullam similique quasi voluptatibus accusamus mollitia cum tempora libero commodi eius voluptatem temporibus sapiente optio?</p>
+        </div>
+        <div class="libro">
+            <img src="../imagenes/libro.png" alt="">
+            <p class="titulo">libro 3</p>
+            <p class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni reprehenderit asperiores, laboriosam quod eaque blanditiis ullam similique quasi voluptatibus accusamus mollitia cum tempora libero commodi eius voluptatem temporibus sapiente optio?</p>
+        </div>
+    </main>
+    <aside>
+        <h2>Tabla de libros</h2>
+        <table id="tabla">
+            <caption class="cap">Listado de libros, número de ejemplares y número total</caption>
+                <thead id="cabecera_tabla">
+                    <tr class="cab">
+                        <th>Titulo</th>
+                        <th>Número de ejemplares</th>
+                    </tr>
+                </thead>
+                <tbody class="tabla_elemento"><!-- Tendrá 7 filas-->
+                    <tr class="fila"><!-- En estilos, fila tendra display grid con tres columnas-->
+                        <td>libro 1</td>
+                        <td>15</td>
+                    </tr>
+                    <tr class="fila"><!--2-->
+                        <td>libro 2</td>
+                        <td>10</td>
+                    </tr>
+                    <tr class="fila"><!--3-->
+                        <td>libro 3</td>
+                        <td>5</td>
+                    </tr>
+                    <tr class="fila"><!--4-->
+                        <th>Total</th>
+                        <td>30</td>
+                    </tr>
+                </tbody>
+        </table>
+    </aside>
+
+    <footer>
+        <h3>I.E.S Trassierra</h3>
+    </footer>
+
 </body>
+
 </html>
