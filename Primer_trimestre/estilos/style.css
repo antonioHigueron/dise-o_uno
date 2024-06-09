@@ -16,6 +16,9 @@
 
 /* --1-- */
 body {
+    
+    /* la altura se ajusta al contenido */
+    height: min-content;
     /* color de fondo */
     background-color: aqua;
     /* estructura de los componentes hijos */
@@ -23,13 +26,15 @@ body {
     /* hay que darle altura, para que los % funcionen */
     /* height: 100%; */
     /* numero de filas */
-    grid-template-rows: 50% 50% 200% 50%;
+    grid-template-rows: auto auto auto auto;
     /* numero de columnas */
     grid-template-columns: 60% 40%;
     /* --2-- */
 }
 
 header {
+    /* la altura se ajusta al contenido */
+    height: fit-content;
     /* borde que tiene el contenedor */
     border: 1px black solid;
     /* distancia hacia dentro del contenedor */
@@ -56,6 +61,8 @@ header {
 }
 
 nav {
+    /* la altura se ajusta al contenido */
+    height: fit-content;
     border: 1px black solid;
     background-color: rgb(189, 136, 58);
     grid-row-start: 2;
@@ -67,6 +74,7 @@ nav {
 }
 
 main {
+
     border: 1px black solid;
     background-color: rgb(148, 4, 177);
     grid-row-start: 3;
@@ -77,11 +85,15 @@ main {
     margin-right: 1vh;
     /* --4--main*/
     /* ordenar libros vertical y horizontal */
-    display: flex;flex-direction: row;justify-content: space-around;align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 
 }
 
 aside {
+
     border: 1px black solid;
     background-color: rgb(243, 255, 79);
     grid-row-start: 3;
@@ -92,11 +104,15 @@ aside {
     /* --5--aside,tabla */
     display: flex;
     /* poner los item hijos centrados en direccion columna */
-    flex-direction: column;justify-content: center;align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 }
 
 footer {
+    /* la altura se ajusta al contenido */
+    height: fit-content;
     border: 1px black solid;
     background-color: rgb(246, 247, 240);
     grid-row-start: 4;
@@ -148,16 +164,28 @@ h1 {
 li {
     /*2 opcion, genera espacio a la derecha de cada elemento del nav */
     padding-right: 10vh;
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+li:last-child {
+    color: red;
 }
 
 
 /* --4--main*/
-.libro{
+.libro {
     background-color: brown;
+    /* poner los bordes redondos */
     border-radius: 12%;
     display: flex;
     /* poner los item hijos centrados en direccion columna */
-    flex-direction: column;justify-content: center;align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     /* margen entre los libros que se encuentran dentro del main */
     margin: 1vh;
     padding: 1vh;
@@ -166,46 +194,57 @@ li {
 }
 
 /* poner borde a los libros impares */
-.libro:nth-child(odd){/*odd=impares*/
+.libro:nth-child(odd) {
+    /*odd=impares*/
     border: 5px solid green;
 }
+
 /* poner borde a los libros pares */
-.libro:nth-child(even){/*even=pares*/
+.libro:nth-child(even) {
+    /*even=pares*/
     border: 5px solid blue;
 }
 
-.libro img{
+.libro img {
     /* medidas imagenes de cada libro */
     height: 10vh;
 }
 
-.titulo{
+.titulo {
     /* poner el titulo de los libros en el centro */
-    text-align: center;
+    display: flex;
+    /* poner los item hijos centrados en direccion columna */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.libro p{
+.libro p {
     /* Número de columnas */
-    column-count: 2; 
+    column-count: 2;
     /* Espacio entre columnas */
-    column-gap: 20px; 
+    column-gap: 20px;
     /* Línea separadora entre columnas */
-    column-rule: 1px solid #999; 
-    
+    column-rule: 1px solid #999;
+
 }
 
 /* --5--aside*/
 
-td, th{
+td,
+th {
     border: 1px solid black;
 }
 
-.fila{
+.fila {
     text-align: center;
 }
 
 /*--6--footer*/
-
+/* cambiar el color cuando se pasa el raton por encima */
+h3:hover{
+    color: darkgreen;
+}
 
 
 
