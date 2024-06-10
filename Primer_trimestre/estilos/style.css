@@ -1,12 +1,18 @@
 /* --2-- */
 /* definir una fuente para el texto del header */
 @font-face {
+    /*alias para usar la fuente*/
     font-family: 'nombre';
     src: url("../fuentes/Ubuntu-Regular.ttf");
     src: url("../fuentes/fuente_examen.ttf");
-    /* esta es la fuente local del equipo, y segura por defecto*/
-    src: sans-serif;
 }
+
+@font-face {
+    /*fuente segura por si falla la primera definida*/
+    font-family: 'sans-serif';
+    src: local("sans-serif");
+}
+
 
 :root {
     /* crear variable a usar como propiedad 'fuente' en el header */
@@ -168,8 +174,13 @@ li {
 }
 
 a {
+    /*que los estilos tipicos de un enlace no se apliquen*/
     text-decoration: none;
+    /*cambiar el color del texto del enlace*/
+    color: black;
 }
+
+
 
 li:last-child {
     color: red;
@@ -247,6 +258,118 @@ h3:hover{
 }
 
 
+/*--7--mediaQuery*/
+/*media query para dispositivos con menos de 500px*/
+@media screen and (max-width: 499px) {
+
+    body {
+        /*para que aparezcan los hijos directos en una sola columna*/
+        display: flex;flex-direction: column;
+        /*background-color: azure;*/
+    }
+    /*ocultar zona entera*/
+    header{
+        display: none;
+    }
+    /*ocultar zona entera*/
+    aside{
+        display: none;
+    }
+
+    main{
+        /*para que aparezcan los hijos directos en una sola columna*/
+        display: flex; flex-direction: column;
+
+    }
+
+    footer{
+        /*si se quiere cambiar el orden en el que aparece el elemento*/
+        /*order:-1;*/
+    }
+
+
+
+    /*Zona de encabezado: Debe aparecer solo logotipo y los iconos o imágenes deben aparecer en dos filas de dos elementos cada una.*/
+    /*nav{
+        background-color: #FFF6EB ;
+    }
+    nav ul{
+        display: none;
+    }
+    .menu{
+        border-top: none;
+        width: 40%;
+        text-align: center;
+    }
+    .menu:hover{
+        width: 40%;
+    }
+    label{
+        box-sizing: border-box;
+        display: inline-block;
+        border: 1px solid black;
+        border-radius: 5px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-weight: bold;
+        text-align: center;
+        user-select: none;
+    }
+    input:checked ~ ul{
+        display:block;
+    }
+    input{
+        display: none;
+    }
+
+    #logo{
+        height: 50px;
+    }
+*/
+    /*Ocultar nombre*/
+   /* #nombre{
+        display:none;
+    }
+    #iconos{
+        display: flex;
+        align-items:center;
+    }
+    #familia{
+        grid-template-columns: auto;
+    }
+
+    #top{
+        grid-template-columns: auto;
+    }
+
+    #sub1{
+        grid-template-rows: auto auto auto;
+    }
+    #tabla{
+        display:none;
+    }
+
+    #sub2{
+        grid-template-columns: auto auto;
+
+    }
+    .prod:nth-child(1),
+    .prod:nth-child(2),
+    .prod:nth-child(3),
+    .prod:nth-child(5) {
+        display:none;
+    }
+    .img_sub2 img{
+        width: auto;
+    }
+
+    #texto{
+        grid-template-columns: auto;
+        gap: 3px;
+    }
+*/
+}
 
 
 /* 1 estructura */
@@ -255,6 +378,7 @@ h3:hover{
 /* 4 contenido, main*/
 /* 5 aside, tabla*/
 /* 6 footer*/
-/* 7 */
+
+/* 7 media-query */
 /* 8 */
 /* 9 */

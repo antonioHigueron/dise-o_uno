@@ -16,24 +16,24 @@
     </header>
     <nav>
         <ul id="navegacion">
-            <li accesskey="u" tabindex="1">Catalogo</li><!--accesskey: shift + alt + letra-->
+            <li accesskey="u" tabindex="1"><a href="#contenidoMain">Catalogo</a> </li><!--accesskey: shift + alt + letra-->
             <li accesskey="o" tabindex="2">Ventas</li>
             <li accesskey="n" tabindex="3">Novedades</li>
         </ul>
     </nav>
-    <main>
+    <main id="contenidoMain">
         <div class="libro">
-            <img src="../imagenes/libro.png" alt="">
+            <img src="../imagenes/libro.png" alt="titulo del primer libro">
             <p class="titulo">libro 1</p>
             <p class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni reprehenderit asperiores, laboriosam quod eaque blanditiis ullam similique quasi voluptatibus accusamus mollitia cum tempora libero commodi eius voluptatem temporibus sapiente optio?</p>
         </div>
         <div class="libro">
-            <img src="../imagenes/libro.png" alt="">
+            <img src="../imagenes/libro.png" alt="titulo del segundo libro">
             <p class="titulo">libro 2</p>
             <p class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni reprehenderit asperiores, laboriosam quod eaque blanditiis ullam similique quasi voluptatibus accusamus mollitia cum tempora libero commodi eius voluptatem temporibus sapiente optio?</p>
         </div>
         <div class="libro">
-            <img src="../imagenes/libro.png" alt="">
+            <img src="../imagenes/libro.png" alt="titulo del tercer libro">
             <p class="titulo">libro 3</p>
             <p class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni reprehenderit asperiores, laboriosam quod eaque blanditiis ullam similique quasi voluptatibus accusamus mollitia cum tempora libero commodi eius voluptatem temporibus sapiente optio?</p>
         </div>
@@ -44,26 +44,26 @@
             <caption class="cap">Listado de libros, número de ejemplares y número total</caption>
                 <thead id="cabecera_tabla">
                     <tr class="cab">
-                        <th>Titulo</th>
-                        <th>Número de ejemplares</th>
+                        <th id="tituloLibro">Titulo</th>
+                        <th id="ejemplares">Número de ejemplares</th>
                     </tr>
                 </thead>
                 <tbody class="tabla_elemento"><!-- Tendrá 7 filas-->
                     <tr class="fila"><!-- En estilos, fila tendra display grid con tres columnas-->
-                        <td>libro 1</td>
-                        <td>15</td>
+                        <td headers="tituloLibro">libro 1</td>
+                        <td headers="ejemplares">15</td>
                     </tr>
                     <tr class="fila"><!--2-->
-                        <td>libro 2</td>
-                        <td>10</td>
+                        <td headers="tituloLibro">libro 2</td>
+                        <td headers="ejemplares">10</td>
                     </tr>
                     <tr class="fila"><!--3-->
-                        <td>libro 3</td>
-                        <td>5</td>
+                        <td headers="tituloLibro">libro 3</td>
+                        <td headers="ejemplares">5</td>
                     </tr>
                     <tr class="fila"><!--4-->
-                        <th>Total</th>
-                        <td>30</td>
+                        <th headers="tituloLibro">Total</th>
+                        <td headers="ejemplares">30</td>
                     </tr>
                 </tbody>
         </table>
