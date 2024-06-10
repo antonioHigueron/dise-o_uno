@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+}
+
+/* ************************************************************************************************ */
+/* Estructura de la maqueta y elementos genéricos */
+/* ************************************************************************************************ */
+
+body {
+
+    /* Definimos el contenedor principal como un grid */
+    display: grid;
+
+    /* Definimos la separación entre cada una de las zonas */
+    grid-gap: 5px;
+
+    /* Definimos el número de filas y columnas que conforman nuestra maqueta*/
+    grid-template-columns: 15% 15% 34% 35%;
+    grid-template-rows: 50px 300px 300px;
+
+    /* Definimos mediante areas nuestra maqueta*/
+    grid-template-areas:
+        "header header header header"
+        "imagen imagen imagen video"
+        "animacion animacion animacion animacion";
+    justify-items: stretch;
+}
+
+/* Asignamos a todos los div , cabecera y pie un borde para diferenciarlos */
+header,
+.zona {
+    border: 2px solid black;
+    margin: 2px;
+}
+
+/* Asignamos cada una de las areas definidas en el grid a un elemento del HTML */
+header {
+    grid-area: header;
+}
+
+.z_imagen {
+    grid-area: imagen;
+}
+
+.z_video {
+    grid-area: video;
+}
+
+.z_animacion {
+    grid-area: animacion;
+}
+
+.zona {
+    text-align: center;
+}
+
+/* Estilos para los encabezados h2 y h3 y los botones*/
+h2 {
+    text-align: center;
+    color: red;
+    margin: 0px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+h3 {
+    text-align: center;
+    color: blue;
+    margin: 0px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* Definimos el color de los botones de todo el formulario */
+button {
+    background-color: yellowgreen;
+}
+
+/* ************************************************************************************************ */
+/* ZONA RELACIONADO CON EL VIDEO */
+/* ************************************************************************************************ */
+.z_video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.z_video button {
+    width: 200px;
+    margin: 5px;
+}
+
+/* ************************************************************************************************ */
+/* RELACIONADO CON LA ZONA DE ANIMACIÓN */
+/* ************************************************************************************************ */
+
+/* ------------------------------------*/
+/* Definimos el tamaño y la posición de las bandas y el escudo que conforman la bandera */
+/* ------------------------------------*/
+#banda_1,
+#banda_2,
+#banda_3 {
+    width: 20px;
+    height: 10px;
+    background-color: black;
+    border: 2px solid black;
+    position: relative;
+}
+
+#banda_1 {
+    /* Banda situada en la parte izquierda superior, tendrá que tener un color verde */
+    left: 5%;
+    top: 10px;
+}
+
+#banda_2 {
+    /* Banda situaada en la parte izquierda, un poco más abajo que la banda_1, tendrá que tener un color blanco */
+    left: 20%;
+    top: 80px;
+}
+
+#banda_3 {
+    /* Banda situada en la parte derecha inferior, tendrá que tener un color verde */
+    left: 80%;
+    top: 150px;
+}
+
+#escudo {
+    width: 10%;
+    height: auto;
+    left: 45%;
+    top: -70px;
+    z-index: 2;
+    position: relative;
+}
+
+#img_escudo {
+    width: 50px;
+    height: auto;
+}
+
+
+
+/* ************************************************************************************************ */
+/* ************************************************************************************************ */
+/* ************************************************************************************************ */
+/* ************************************************************************************************ */
+/* DESARROLLO A REALIZAR POR EL ALUMNADO */
+/* ************************************************************************************************ */
+
+/*media query para dispositivos con menos de 768px*/
+/*@media screen and (max-width: 149px) {
+    
+    img {
+        src: "./img_composición.png";
+    }
+
+}*/
+
+#banda_1 {
+    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-name: banda1;
+
+}
+
+@keyframes banda1 {
+    from {
+        transform: rotateY(0deg);
+        margin-left: 95%;
+    }
+
+    50% {
+        scale: 500%;
+        width: 150px;
+    }
+
+    to {
+        align-items: center;
+        background-color: green;
+        color: green;
+        border: none;
+    }
+}
+
+#banda_2 {
+    /*animation-delay: 500ms;*/
+    /* animation-duration: 2s;
+    animation-name: banda2;
+    animation-iteration-count: infinite; */
+
+}
+
+@keyframes banda2 {
+    from {
+        margin-right: 0%;
+    }
+
+    50% {
+        scale: 500%;
+        width: 150px;
+
+    }
+
+    to {
+        align-items: center;
+        background-color: white;
+        color: white;
+        border: none;
+
+    }
+}
+
+#banda_3 {
+    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-name: banda3;
+
+}
+
+@keyframes banda3 {
+    from {}
+
+    50% {
+        scale: 500%;
+        width: 150px;
+    }
+
+    to {
+        align-items: center;
+        background-color: green;
+        color: green;
+        border: none;
+    }
+}
+
+#escudo {
+    animation-duration: 4s;
+    animation-name: escudo;
+
+}
+
+@keyframes escudo {
+    from {
+        scale: 0;
+    }
+
+    50% {
+        transform: translate(100, 0);
+        scale: 1;
+    }
+
+    to {
+        scale: 2;
+        filter: grayscale(100%);
+
+    }
+}

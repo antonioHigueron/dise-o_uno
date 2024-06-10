@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen DIW (Segundo parcial). Curso 22/23</title>
+    <link rel="stylesheet" href="../estilos/estilos_examen_junio.css" media="screen">
+    <link rel="icon" type="image/jpg" href="../imagenes/favicon/IESTrassierra_favicon-96x96.png" />
+
+</head>
+
+<body>
+    <header>
+        <h2>EXAMEN JUNIO (MAQUETA)</h2>
+    </header>
+
+    <!-- Zona reservada para insertar la imagen tratada  -->
+    <div class="zona z_imagen">
+        <h2>ZONA DE IMAGEN</h2>
+
+        <!-- ---------------------------------------------------- -->
+        <!-- Debes insertar aquí la imagen del ejercicio ........ -->
+        <!-- ---------------------------------------------------- -->
+        <!-- <img src="./img_composición_300.png" srcset="./img_composición.png 10w, ./img_composición_300.png 30vw" sizes="(max-width: 149px) 10vw, 30vw" alt="Ejemplo"> -->
+        <picture>
+            <source media="(max-width: 149px)" srcset="../imagenes/img_composición.png" width="10vw">
+            <source media="(min-width: 150px)" srcset="../imagenes/img_composición_300.png" width="30vw">
+            <img src="../imagenes/img_composición_300.png" alt="imagen">
+        </picture>
+    </div>
+
+    <!-- Zona reservada para insertar el video suministrado -->
+    <div class="zona z_video">
+        <h2>ZONA DE VIDEO</h2>
+        <!-- -------------------------------------------------------------------------- -->
+        <!-- Insertar etiquetas necesarias para que el video se visualice correctamente -->
+        <!-- -------------------------------------------------------------------------- -->
+
+        <div id="caja_video" class="caja_medio">
+            <video id="medio_video" width="300" height="100" poster="../imagenes/img_composición.png">
+                <source src="../video/video_animacion_css.mp4" type="video/mp4">
+                Tu navegador no soporta vídeo
+            </video>
+        </div>
+        <button id="b_play" type="button" onclick="presionar()">Play</button>
+        <button id="b_pause" type="button" onclick="presionar()"> Pause</button>
+
+        <script>
+            var medio = document.getElementById('medio_video');
+            function presionar() {
+                if (!medio.paused && !medio.ended) {
+                    medio.pause();
+                } else {
+                    medio.play();
+                }
+            }
+        </script>
+
+
+    </div>
+
+
+    <!-- Zona reservada para la animación -->
+    <div class="zona z_animacion">
+        <h2>ZONA DE ANIMACIÓN</h2>
+        <!-- Definimos los elementos que conformarán la bander de Andlucía-->
+        <div id="banda_1"></div>
+        <div id="banda_2"></div>
+        <div id="banda_3"></div>
+        <div id="escudo">
+            <img id="img_escudo" src="../imagenes/EscudoAndalucia.svg">
+        </div>
+    </div>
+
+
+</body>
+
+</html>
