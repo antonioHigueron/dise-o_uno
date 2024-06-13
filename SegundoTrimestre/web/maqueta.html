@@ -23,12 +23,37 @@
         <!-- ---------------------------------------------------- -->
         <!-- Debes insertar aquí la imagen del ejercicio ........ -->
         <!-- ---------------------------------------------------- -->
-        <!-- <img src="./img_composición_300.png" srcset="./img_composición.png 10w, ./img_composición_300.png 30vw" sizes="(max-width: 149px) 10vw, 30vw" alt="Ejemplo"> -->
-        <picture>
-            <source media="(max-width: 149px)" srcset="../imagenes/img_composición.png" width="10vw">
-            <source media="(min-width: 150px)" srcset="../imagenes/img_composición_300.png" width="30vw">
-            <img src="../imagenes/img_composición_300.png" alt="imagen">
-        </picture>
+<!--         <img-->
+<!--                 src="../imagenes/img_composición_300.png"-->
+<!--                 srcset="../imagenes/img_composición.png 10w, ../imagenes/img_composición_300.png 30vw"-->
+<!--                 sizes="(max-width: 600px) 10vw, 30vw"-->
+<!--                 alt="Ejemplo"-->
+<!--         >-->
+
+<!--        copilot-->
+<!--        <img src="../imagenes/img_composición_300.png"-->
+<!--             srcset="../imagenes/img_composición.png 150w,-->
+<!--             ../imagenes/img_composición_300.png 300w"-->
+<!--             sizes="(max-width: 600px) 10vw, 30vw"-->
+<!--             alt="Descripción de la imagen">-->
+
+<!--        chapgpt-->
+        <div class="image-container">
+        <img
+                src="../imagenes/img_composición_300.png"
+                srcset="../imagenes/img_composición.png 150w, ../imagenes/img_composición_300.png 300w"
+                sizes="(max-width: 600px) 10vw, 30vw"
+                class="responsive-image"
+                alt="Imagen Responsiva">
+        </div>
+
+
+        <!--        <picture>-->
+<!--            <source media="(max-width: 149px)" srcset="../imagenes/img_composición.png" width="10vw">-->
+<!--            <source media="(min-width: 150px)" srcset="../imagenes/img_composición_300.png" width="30vw">-->
+<!--            <img src="../imagenes/img_composición_300.png" alt="imagen">-->
+<!--        </picture>-->
+
     </div>
 
     <!-- Zona reservada para insertar el video suministrado -->

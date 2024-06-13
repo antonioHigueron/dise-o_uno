@@ -142,6 +142,17 @@ button {
 }
 
 
+.responsive-image {
+    width: 10vw;
+}
+.image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
 
 /* ************************************************************************************************ */
 /* ************************************************************************************************ */
@@ -150,14 +161,18 @@ button {
 /* DESARROLLO A REALIZAR POR EL ALUMNADO */
 /* ************************************************************************************************ */
 
-/*media query para dispositivos con menos de 768px*/
-/*@media screen and (max-width: 149px) {
-    
-    img {
-        src: "./img_composición.png";
-    }
+/*media query para dispositivos con menos de 150px*/
+/*@media screen and (max-width: 320px) {*/
+/*    */
+/*    img {*/
+/*        srcset: "../imagenes/img_composición.png";*/
+/*    }*/
 
-}*/
+/*}*/
+
+
+
+
 
 #banda_1 {
     animation-delay: 2s;
